@@ -13,7 +13,6 @@ https://github.com/msuz/heatmap.jquery
     }, params);
     
     var x = (n - conf.min) / (conf.max - conf.min);
-    console.log(n, x);
     var rgb = $self.heatmapCalc(conf.mode, x);
     $self.css(
       'background-color',
