@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sample for heatmap.js</title>
+  </head>
+  <body>
+
+    <ul>
+      <li>43</li><li>44</li><li>45</li>
+      <li>46</li><li>47</li><li>48</li>
+      <li>49</li><li>50</li><li>51</li>
+      <li>52</li><li>53</li><li>54</li>
+      <li>55</li><li>56</li><li>57</li>
+    </ul>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./heatmap.js"></script>
+    <script type="text/javascript">
+$(function() {
+  var params = {
+    'min': 45,
+    'max': 55,
+  };
+  $('ul > li').each(function(i, li) {
+    var $li = $(li);
+    var n = parseFloat($li.text());
+    $li.heatmap(n, params);
+  });
+});
+    </script>
+
+  </body>
+</html>
